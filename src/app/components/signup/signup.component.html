@@ -1,0 +1,128 @@
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic
+        container-p-y">
+        <div class="authentication-inner">
+            <!-- Register -->
+            <div class="card card_login">
+                <div class="card-body">
+                    <!-- Logo -->
+
+                    <!-- /Logo -->
+                    <h4 class="mb-2">Sign up new account</h4>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">User
+                            name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="txtLoginName"
+                            placeholder="Enter your username"
+                            ng-model="signup_username"
+                            autofocus
+                            />
+                        <div class="signup_error"
+                            ng-show="signup_username == ''">
+                            *User name is required
+                        </div>
+                    </div>
+                    <div class="mb-3 form-password-toggle">
+                        <div class="d-flex justify-content-between">
+                            <label class="form-label"
+                                for="password">Password</label>
+                        </div>
+                        <div class="input-group input-group-merge">
+                            <input
+                                type="password"
+                                id="txtLoginPassword"
+                                class="form-control"
+                                name="password"
+                                placeholder="*************"
+                                ng-model="signup_pass"
+                                />
+                            <span class="input-group-text
+                                cursor-pointer"><i class="bx
+                                    bx-hide"></i></span>
+                                    
+                        </div>
+                        <div class="signup_error"
+                            ng-show="signup_pass == ''">
+                            *Password is required
+                        </div>
+                    </div>
+                    <div class="mb-3 form-password-toggle">
+                        <div class="d-flex justify-content-between">
+                            <label class="form-label"
+                                for="password">Confirm password</label>
+                        </div>
+                        <div class="input-group input-group-merge">
+                            <input
+                                type="password"
+                                id="txtLoginPassword"
+                                class="form-control"
+                                name="password"
+                                placeholder="*************"
+                                ng-model="signup_confirm"
+                                />
+                            <span class="input-group-text
+                                cursor-pointer"><i class="bx
+                                    bx-hide"></i></span>
+                        </div>
+                        <div class="signup_error"
+                            ng-show="signup_pass != signup_confirm && signup_confirm != null">
+                            *Passwords do not match
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success d-grid w-100"
+                            ng-click="funcSignUp()">Sign up</button>
+                    </div>
+
+                    <p class="text-center">
+                        <a href="login">
+                            <span>Log in</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- /Register -->
+        </div>
+    </div>
+</div>
+
+<!-- / Content -->
+
+<!--Error modal-->
+<button
+    id="btn_modal_signup"
+    style="display: none;"
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#modalCenter">
+    Launch modal
+</button>
+<div class="modal fade" id="modalCenter" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCenterTitle" style="color: red;">Error</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <h5></h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger
+                    btn-outline-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

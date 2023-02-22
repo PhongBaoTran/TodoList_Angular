@@ -1,0 +1,61 @@
+
+<script src=""></script>
+    <div class="container-xxl">
+        <div class="authentication-wrapper authentication-basic
+            container-p-y">
+            <div class="authentication-inner">
+                <!-- Register -->
+                <div class="card card_login">
+                    <div class="card-body">
+                        <!-- Logo -->
+
+                        <!-- /Logo -->
+                        <h4 class="mb-2">Welcome to Todo List! 👋</h4>
+                        <p class="mb-4">Please sign-in to your account </p>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">User name</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="txtLoginName"
+                                    placeholder="Enter your username"
+                                    [(ngModel)]="login_username"
+                                    autofocus
+                                    />
+                                <div class="signup_error"
+                                    *ngIf="login_username_error">
+                                    *User name is required
+                                </div>    
+                            </div>
+                            <div class="mb-3 form-password-toggle">
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-label"
+                                        for="password">Password</label>
+                                </div>
+                                <div class="input-group input-group-merge">
+                                    <input
+                                        [type]="type"
+                                        id="txtLoginPassword"
+                                        class="form-control"
+                                        placeholder="Enter your password"
+                                        [(ngModel)]="login_password"
+                                        />
+                                    <span class="input-group-text cursor-pointer"
+                                            (click)="funcShowHideText()"><i class="bx {{eye_icon}}"></i></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button (click)="funcLogin()" class="btn btn-success d-grid w-100">Sign in</button>
+                            </div>
+
+                        <p class="text-center">
+                            <a href="signup">
+                                <span>Create an account</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /Register -->
+            </div>
+        </div>
+    </div>

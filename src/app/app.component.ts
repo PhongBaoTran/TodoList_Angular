@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo';
+  ngOnInit() : void {
+    // console.log("AAAA")
+  }
+  
+  userList = new Array();
+  todoList = new Array();
+  arrStatus = ["Done", "In process", "Paused", "Preparing"]
+  // init data
 }
